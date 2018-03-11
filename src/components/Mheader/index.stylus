@@ -1,0 +1,28 @@
+@import '~src/assets/stylus/variable.stylus'
+.m-header
+  position relative
+  height 44px
+  text-align center
+  color $color-theme
+  .m-header-logo
+    display inline-block
+    vertical-align top
+    margin-top 6px
+    width 30px
+    height 32px
+    margin-right 9px
+    background-image url('~src/assets/images/default.png')
+    background-size 30px 32px
+  h2
+    display inline-block
+    vertical-align middle
+    line-height 44px
+  .m-header-mine
+    position absolute
+    top 0
+    right 0
+    i
+      display block
+      padding 12px
+      font-size 20px
+      color $color-theme

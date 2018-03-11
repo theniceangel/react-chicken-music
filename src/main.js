@@ -3,10 +3,10 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Mheader from 'components/Mheader'
+import Mheader from 'components/Mheader/index'
 import Recommend from 'containers/Recommend'
-import TabLinkList from 'containers/TabLinkList'
-import './assets/stylus/reset.stylus'
+import TabLinkList from 'containers/TabLinkList/index'
+import 'src/assets/stylus/index.stylus'
 ReactDom.render(
   <Router>
     <div>

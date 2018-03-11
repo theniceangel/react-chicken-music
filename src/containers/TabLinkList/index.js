@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
-import React, {Component} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-export default class TabLinkList extends Component {
+import './index.stylus'
+export default class TabLinkList extends React.Component {
   render () {
     const TABS = [
       {
