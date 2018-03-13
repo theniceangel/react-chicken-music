@@ -4,9 +4,9 @@ import ReactDom from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Mheader from 'components/Mheader/index'
-import Recommend from 'containers/Recommend'
+import Recommend from 'containers/Recommend/index'
 import TabLinkList from 'containers/TabLinkList/index'
-import 'src/assets/stylus/index.stylus'
+import 'src/common/stylus/index.stylus'
 ReactDom.render(
   <Router>
     <div>

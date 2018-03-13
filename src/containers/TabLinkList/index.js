@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './index.stylus'
 export default class TabLinkList extends React.Component {
   render () {
@@ -26,8 +26,8 @@ export default class TabLinkList extends React.Component {
       }
     ]
     let tabLinkList = TABS.map((tab) =>
-      <li key={tab.id}><Link to={tab.path}>{tab.name}</Link></li>
+      <li className='tab-item' key={tab.id}><NavLink activeClassName='tab-selected' to={tab.path}>{tab.name}</NavLink></li>
     )
-    return <ul>{tabLinkList}</ul>
+    return <ul className='tab-group'>{tabLinkList}</ul>
   }
 }
