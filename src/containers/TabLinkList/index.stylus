@@ -1,4 +1,4 @@
-@import '~src/assets/stylus/variable.stylus'
+@import '~common/stylus/variable.stylus'
 .tab-group
   width 100%
   display flex

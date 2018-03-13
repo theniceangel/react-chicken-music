@@ -28,11 +28,9 @@ export default class Slider extends React.Component {
   _initSlider () {
     this.slider = new BScroll(this.slide, {
       snap: this.props.snap,
-      scrollX: true,
-      scrollY: false,
-      momentum: false,
-      bounce: false,
-      click: false
+      scrollX: this.props.scrollX,
+      momentum: this.props.momentum,
+      click: this.props.click
     })
     this.slider.on('scrollEnd', this._onScrollEnd)
     this.slider.on('touchend', () => {
@@ -116,7 +114,6 @@ Slider.defaultProps = {
     }
   },
   scrollX: true,
-  scrollY: false,
   momentum: false,
   bounce: false,
   click: false,

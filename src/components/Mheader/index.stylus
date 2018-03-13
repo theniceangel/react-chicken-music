@@ -1,4 +1,4 @@
-@import '~src/assets/stylus/variable.stylus'
+@import '~common/stylus/variable.stylus'
 .m-header
   position relative
   height 44px
@@ -11,7 +11,7 @@
     width 30px
     height 32px
     margin-right 9px
-    background-image url('~src/assets/images/default.png')
+    background-image url('~common/images/default.png')
     background-size 30px 32px
   h2
     display inline-block
