@@ -8,7 +8,7 @@ export default class Recommend extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      listData: [],
+      sliderData: [],
       recommendList: []
     }
   }
