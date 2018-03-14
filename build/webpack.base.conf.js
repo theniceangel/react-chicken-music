@@ -34,6 +34,7 @@ module.exports = {
     extensions: ['.js', '.json'],
     alias: {
       'src': resolve('src'),
+      'api': resolve('src/api'),
       'components': resolve('src/components'),
       'containers': resolve('src/containers'),
       'common': resolve('src/common')

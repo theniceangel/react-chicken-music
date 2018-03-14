@@ -1,10 +1,9 @@
 import React from 'react'
 import BScroll from 'better-scroll'
 import PropTypes from 'prop-types'
-
+import './index.stylus'
 export default class Scroll extends React.Component {
   componentDidMount () {
-    console.log(this.dom)
     this._initScroll()
   }
   _initScroll () {

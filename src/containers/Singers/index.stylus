@@ -1,0 +1,7 @@
+@import '~common/stylus/variable.stylus'
+.singers
+  position absolute
+  top 88px
+  left 0
+  bottom 0
+  right 0

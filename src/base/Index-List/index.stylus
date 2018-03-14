@@ -1,0 +1,29 @@
+@import '~common/stylus/variable.stylus'
+.singers-scroll-container
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  right 0
+  overflow hidden
+.list-group
+  padding-bottom 30px
+  .list-group-title
+    height 30px
+    line-height 30px
+    padding-left 20px
+    font-size 12px
+    color hsla(0,0%,100%,.5)
+    background $color-highlight-background
+  .list-group-item
+    display flex
+    align-items center
+    padding 20px 0 0 30px
+    .avatar
+      width 50px
+      height 50px
+      border-radius 50%
+    .name
+      margin-left 20px
+      color hsla(0,0%,100%,.5)
+      font-size 14px

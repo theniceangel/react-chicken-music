@@ -1,6 +1,6 @@
 @import '~common/stylus/mixin.stylus'
 @import '~common/stylus/variable.stylus'
-.bs-container
+.recommend-bs-container
   position absolute
   top 88px
   left 0
