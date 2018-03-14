@@ -1,4 +1,12 @@
-@import '~src/common/stylus/mixin.stylus'
+@import '~common/stylus/mixin.stylus'
+@import '~common/stylus/variable.stylus'
+.bs-container
+  position absolute
+  top 88px
+  left 0
+  bottom 0
+  right 0
+  overflow hidden
 .slider-wrapper
   width 100%
   position relative
@@ -18,3 +26,25 @@
   text-align: center;
   font-size: 14px;
   color: #ffcd32;
+.item
+  display: flex
+  box-sizing: border-box
+  align-items: center
+  padding: 0 20px 20px 20px
+  .icon
+    flex: 0 0 60px
+    width: 60px
+    padding-right: 20px
+  .text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex: 1
+    line-height: 20px
+    overflow: hidden
+    font-size: $font-size-medium
+    .name
+      margin-bottom: 10px
+      color: $color-text
+    .desc
+      color: $color-text-d
