@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import Mheader from 'components/Mheader/Mheader'
 import Recommend from 'containers/Recommend/Recommend'
 import Singers from 'containers/Singers/Singers'
+import Rank from 'containers/Rank/Rank'
 import TabLinkList from 'containers/TabLinkList/TabLinkList'
 import 'src/common/stylus/index.stylus'
 
@@ -17,6 +18,7 @@ ReactDom.render(
       <Switch>
         <Route path="/recommend" component={Recommend}/>
         <Route path="/singers" component={Singers}/>
+        <Route path="/rank" component={Rank}/>
         <Redirect from="/" to="/recommend"/>
       </Switch>
     </div>

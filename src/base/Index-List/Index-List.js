@@ -36,6 +36,12 @@ export default class IndexList extends React.Component {
     return true
   }
   
+  componentWillUnmount () {
+    this.setState = (state) => {
+      return
+    }
+  }
+  
   _scroll (pos) {
     let { y } = pos
     // change right sidebar shortcuts
@@ -85,7 +91,9 @@ export default class IndexList extends React.Component {
     }
     let deltaY = this.heightList[this.state.currentIndex + 1] + scrollY
     deltaY = (deltaY > 0 && deltaY < FIX_TITLE_HEIGHT) ? (deltaY - FIX_TITLE_HEIGHT) : 0
-    this.refs.listFixed.style.transform = `translate3d(0,${deltaY}px,0)`
+    if (this.refs.listFixed) {
+      this.refs.listFixed.style.transform = `translate3d(0,${deltaY}px,0)`
+    }
   }
   
   _onShortCutTouchStart (e) {
@@ -125,9 +133,7 @@ export default class IndexList extends React.Component {
   render () {
     return (
       <div className="singers-scroll-container">
-        <Scroll ref="scroll" listenScroll={ this.state.listenScroll }
-          probeType={ this.state.probeType }
-          scroll={ this._scroll }>
+        <Scroll ref="scroll" listenScroll={ this.state.listenScroll } probeType={ this.state.probeType } scroll={ this._scroll }>
           <ul ref="listItems">
             { this.props.singersList.map((data, index) => <li className="list-group" key={ index }>
               <h2 className="list-group-title">{ data.title }</h2>
@@ -144,9 +150,10 @@ export default class IndexList extends React.Component {
           <ul ref="test" onTouchStart={ this._onShortCutTouchStart } onTouchMove={ this._onShortCutTouchMove }>
             { this.props.shortCutsList.map((item, index) => {
               return (
-                <li className={ classnames('item', { current: index === this.state.currentIndex }) }
-                  list-index={ index }
-                  key={ index }> { item }</li>)
+                <li className={ classnames('item', { current: index === this.state.currentIndex }) } list-index={ index } key={ index }>
+                  { item }
+                </li>
+              )
             }) }
           </ul>
         </div>
