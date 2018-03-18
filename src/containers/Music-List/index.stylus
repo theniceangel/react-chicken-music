@@ -1,0 +1,44 @@
+@import '~common/stylus/mixin.stylus'
+@import '~common/stylus/variable.stylus'
+.music-list-container
+  position fixed
+  top 0
+  left 0
+  bottom 0
+  right 0
+  height 100%
+  width 100%
+  background $color-background
+  .back
+    position absolute
+    top 0
+    left 6px
+    z-index 50
+    .icon-back
+      display block
+      padding 9px
+      font-size 22px
+      color #ffcd32
+  .title
+    position absolute
+    top 0
+    left 10%
+    z-index 40
+    width 80%
+    no-wrap()
+    text-align center
+    line-height 40px
+    font-size 18px
+    color #fff
+  .cover-img
+    position relative
+    width 100%
+    height 0
+    padding-top 70%
+    transform-origin top
+    background-size cover
+    .play-wrapper
+      position absolute
+      bottom 20px
+      z-index 50
+      width 100%

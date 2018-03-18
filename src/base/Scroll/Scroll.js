@@ -38,7 +38,7 @@ export default class Scroll extends React.Component {
 }
 Scroll.defaultProps = {
   probeType: 1,
-  click: false,
+  click: true,
   listenScroll: false
 }
 Scroll.propTypes = {

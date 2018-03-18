@@ -22,7 +22,7 @@ export default class Slider extends React.Component {
       if (this.props.autoPlay) {
         this._play()
       }
-    }, 200)
+    }, 400)
   }
 
   _initSlider () {
