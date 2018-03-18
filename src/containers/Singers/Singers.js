@@ -1,4 +1,3 @@
-/* */
 import React from 'react'
 import './index.stylus'
 import { getSingerList } from 'src/api/singers'
@@ -12,7 +11,8 @@ export default class Singers extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      singersList: []
+      singersList: [],
+      shortCutsList: []
     }
   }
 
@@ -61,18 +61,19 @@ export default class Singers extends React.Component {
     ret.sort((a, b) => {
       return a.title.charCodeAt(0) - b.title.charCodeAt(0)
     })
-    console.log(hot.concat(ret))
     return hot.concat(ret)
   }
 
   _getSingerList () {
     getSingerList().then((res) => {
       if (res.code === ERR_OK) {
-        let normalizedList = this.normalizeList(res.data.list)
-        let categoryList = normalizedList.map(data => data.title)
-        this.setState({
-          singersList: normalizedList,
-          categoryList
+        let singersList = this.normalizeList(res.data.list)
+        let shortCutsList = singersList.map(data => data.title.substr(0, 1))
+        this.setState((prevState) => {
+          return {
+            singersList,
+            shortCutsList
+          }
         })
       }
     })
@@ -81,7 +82,7 @@ export default class Singers extends React.Component {
   render () {
     return (
       <div className="singers">
-        <IndexList listData={this.state.singersList} categoryList={this.state.categoryList}/>
+        <IndexList singersList={this.state.singersList} shortCutsList={this.state.shortCutsList}/>
       </div>
     )
   }
